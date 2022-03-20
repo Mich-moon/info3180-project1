@@ -1,0 +1,52 @@
+{% extends "base.html" %} {% block main %}
+
+<div class="container-fluid shadow-sm my-4">
+  <div class="row px-0">
+    <div class="col-6 mx-0 p-2">
+      <img
+        class="card-img-top"
+        src="{{ url_for('get_image', filename=prop.prop_photo) }}"
+      />
+    </div>
+    <div class="col-6 mx-0 p-2">
+      <div class="card prop-card">
+        <div class="card-body">
+          <h4>{{ prop.prop_title }}</h4>
+          <div class="row">
+            <div
+              class="rounded-pill pill"
+              style="background-color: rgb(11, 165, 226)"
+            >
+              ${{ prop.prop_price }}
+            </div>
+            <div
+              class="rounded-pill pill"
+              style="background-color: rgb(252, 218, 67)"
+            >
+              {{ prop.prop_type }}
+            </div>
+          </div>
+          <p>{{ prop.prop_desc }}</p>
+          <p>
+            <span>
+              <span class="iconify" data-icon="ic:baseline-bed"></span> {{
+              prop.prop_room_count }} Bedrooms
+            </span>
+            <span class="mx-2"></span>
+            <span>
+              <span class="iconify" data-icon="ic:round-bathroom"></span> {{
+              prop.prop_bathroom_count }} Bathrooms
+            </span>
+          </p>
+          <p><i class="bi-geo-alt"></i> {{ prop.prop_location }}</p>
+
+          <button type="button" id="email-realtor-btn" class="btn">
+            Email Realtor
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
