@@ -1,0 +1,39 @@
+{% extends "base.html" %} {% block main %}
+<h1 class="page-header">Properties</h1>
+
+<div class="container-fluid">
+  <div class="row px-0">
+    {% for prop in properties %}
+
+    <div class="col-4 mx-0 p-2">
+      <div class="card shadow-sm">
+        <img
+          class="card-img-top"
+          src="{{ url_for('get_image', filename=prop.photo) }}"
+        />
+
+        <div class="card-body">
+          <h4>{{ prop.title }}</h4>
+          <p><i class="bi-geo-alt"></i> {{ prop.location }}</p>
+          <div
+            class="rounded-pill pill"
+            style="background-color: rgb(11, 165, 226)"
+          >
+            ${{ prop.price }}
+          </div>
+        </div>
+        <div class="card-footer d-flex justify-content-center">
+          <a
+            href="{{ url_for('property', propertyid=prop.id) }}"
+            class="card-link"
+            >View Property</a
+          >
+        </div>
+      </div>
+    </div>
+
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock %}
