@@ -1,0 +1,97 @@
+{% extends "base.html" %} {% block main %}
+<div class="form-head">
+  <h1>Add New Property</h1>
+</div>
+
+<form
+  method="POST"
+  action="{{ url_for('create_property') }}"
+  enctype="multipart/form-data"
+>
+  {{ form.csrf_token }}
+
+  <div class="form-control">
+    {{ form.title.label }} {{ form.title }} {% if form.title.errors %}
+    <ul class="errors">
+      {% for error in form.title.errors %}
+      <li>{{ error }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </div>
+  <div class="form-control">
+    {{ form.desc.label }} {{ form.desc }} {% if form.desc.errors %}
+    <ul class="errors">
+      {% for error in form.desc.errors %}
+      <li>{{ error }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </div>
+
+  <div class="row form-group">
+    <div class="form-control col-6">
+      {{ form.room_count.label }} {{ form.room_count }} {% if
+      form.room_count.errors %}
+      <ul class="errors">
+        {% for error in form.room_count.errors %}
+        <li>{{ error }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </div>
+    <div class="form-control col-6">
+      {{ form.bathroom_count.label }} {{ form.bathroom_count }} {% if
+      form.bathroom_count.errors %}
+      <ul class="errors">
+        {% for error in form.bathroom_count.errors %}
+        <li>{{ error }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </div>
+    <div class="form-control col-6">
+      {{ form.price.label }} {{ form.price }} {% if form.price.errors %}
+      <ul class="errors">
+        {% for error in form.price.errors %}
+        <li>{{ error }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </div>
+    <div class="form-control col-6">
+      {{ form.type.label }} {{ form.type }} {% if form.type.errors %}
+      <ul class="errors">
+        {% for error in form.type.errors %}
+        <li>{{ error }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </div>
+    <div class="form-control col-6">
+      {{ form.location.label }} {{ form.location }} {% if form.location.errors
+      %}
+      <ul class="errors">
+        {% for error in form.location.errors %}
+        <li>{{ error }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </div>
+  </div>
+  <div class="form-control">
+    {{ form.photo.label }} {{ form.photo }} {% if form.photo.errors %}
+    <ul class="errors">
+      {% for error in form.photo.errors %}
+      <li>{{ error }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </div>
+
+  <div class="form-control">
+    <button type="submit" class="btn btn-primary">Add Property</button>
+  </div>
+</form>
+
+{% endblock %}
