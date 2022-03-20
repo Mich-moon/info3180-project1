@@ -1,5 +1,5 @@
-# flask_starter
-Starter code for a new Flask Application
+# project1
+A simple Flask based application that can accept and display information on properties available for rent/sale.
 
 Remember to always create a virtual environment and install the packages in your requirements file
 
