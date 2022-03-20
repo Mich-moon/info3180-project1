@@ -83,6 +83,7 @@ def create_property():
             db.session.commit()
 
             flash('New property added successfully', 'success')
+            next_page = request.args.get('next')
             return redirect(url_for('properties'))
 
     return render_template('create_property.html', form=form)
