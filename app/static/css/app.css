@@ -1,3 +1,76 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
+
+:root {
+  --theme-green: #0fc5c5;
+}
 body {
-    padding-top: 5rem;
+  padding-top: 5rem;
+}
+.flashes {
+  list-style: none;
+  padding: 12px;
+  border-radius: 5px;
+  width: 20%;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+form label {
+  font-weight: bold;
+}
+.form-control {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 5px 0px 5px 0px;
+  border: none;
+}
+.form-control button {
+  width: 30%;
+}
+.form-group {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  margin: 0px 0px 0px 0px;
+  border: none;
+}
+.form-head {
+  margin: 0px 30px 0px 30px;
+}
+nav,
+.card-footer {
+  background-color: var(--theme-green);
+}
+.card-link {
+  text-decoration: none;
+  color: white;
+  text-justify: auto;
+}
+.card p {
+  color: darkgrey;
+}
+#email-realtor-btn {
+  background-color: var(--theme-green);
+  color: white;
+  width: 30%;
+}
+#email-realtor-btn:hover {
+  background-color: #0b9797;
+}
+select {
+  height: 100%;
+}
+.pill {
+  width: fit-content;
+  height: fit-content;
+  margin: 1em 0em 1em 1em;
+  color: white;
+  font-size: small;
+  padding: 0em 1em 0em 1em;
+}
+.prop-card p {
+  color: black;
 }
