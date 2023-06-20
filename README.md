@@ -11,5 +11,5 @@ $ pip install -r requirements.txt
 $ python run.py
 ```
   
-  ## Online demo
-  [see here](https://peaceful-waters-76300.herokuapp.com/)
+~~## Online demo~~
+~~[see here](https://peaceful-waters-76300.herokuapp.com/)~~
